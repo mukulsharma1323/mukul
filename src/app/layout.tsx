@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import "bootstrap/dist/css/bootstrap.min.css"
+import "../../public/css/style.css" 
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -25,6 +27,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <link href="img/m.svg" rel="icon" />
+      <link href="img/m.svg" rel="apple-touch-icon" />
+
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}
       </body>

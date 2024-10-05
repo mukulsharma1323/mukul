@@ -1,9 +1,10 @@
-import styles from "./page.module.css";
-
+import Hero from "./components/hero";
+import Navbar from "./components/navbar";
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <p>Welcome to your new project! - Mukul Sharma</p>
-    </div>
+    <>
+    <Navbar />
+      <Hero />
+    </>
   );
 }
