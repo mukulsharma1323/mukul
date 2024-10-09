@@ -1,6 +1,73 @@
 import Image from "next/image";
 
 export default function Portfolio() {
+
+    const data = [
+        {
+            title: "React Data Table",
+            image: "/img/portfolio/react-datatable.png",
+            imageUrl: "img/portfolio/react-datatable.png",
+            demoUrl: "https://admin-table-ui.netlify.app/",
+            tech: "React"
+        },
+        {
+            title: "ISEE Analytics",
+            image: "/img/portfolio/isee.png",
+            imageUrl: "img/portfolio/isee.png",
+            demoUrl: "https://i2l.solutions/",
+            tech: "Angular"
+        },
+        {
+            title: "Authentication",
+            image: "/img/portfolio/login-demo.png",
+            imageUrl: "img/portfolio/login-demo.png",
+            demoUrl: "http://mukulsharma.in/login-demo/",
+            tech: "PHP"
+        },
+        {
+            title: "DNH News",
+            image: "/img/portfolio/1.png",
+            imageUrl: "img/portfolio/1.png",
+            demoUrl: "",
+            tech: "Wordpress"
+        },
+        {
+            title: "API for Android App",
+            image: "/img/portfolio/7.png",
+            imageUrl: "img/portfolio/7.png",
+            demoUrl: "",
+            tech: "PHP"
+        },
+        {
+            title: "Hospital Management System",
+            image: "/img/portfolio/3.png",
+            imageUrl: "img/portfolio/3.png",
+            demoUrl: "",
+            tech: "PHP"
+        },
+        {
+            title: "Industrymall.in",
+            image: "/img/portfolio/4.png",
+            imageUrl: "img/portfolio/4.png",
+            demoUrl: "",
+            tech: "PHP"
+        },
+        {
+            title: "Machine cloud",
+            image: "/img/portfolio/5.png" ,
+            imageUrl: "img/portfolio/5.png" ,
+            demoUrl: "",
+            tech: "PHP"
+        },
+        {
+            title: "Electric Studio",
+            image: "/img/portfolio/6.png",
+            imageUrl: "img/portfolio/6.png",
+            demoUrl: "",
+            tech: "NodeJs"
+        },
+    ]
+
     return (
         <>
             <section id="work" className="portfolio-mf sect-pt4 route">
@@ -21,115 +88,40 @@ export default function Portfolio() {
                 </div>
                 <div className="container">
                     <div className="row">
-
-                        <div className="col-md-4">
-                            <div className="work-box">
-                                <a href="img/portfolio/react-datatable.png" data-lightbox="gallery-mf">
-                                    <div className="work-img">
-                                        <Image src="/img/portfolio/react-datatable.png" alt="" className="img-fluid" width={440} height={365} />
-                                    </div>
-                                    <div className="work-content">
-                                        <div className="row">
-                                            <div className="col-sm-8">
-                                                <br />
-                                                <h2 className="w-title">React Data Table</h2>
-                                                <div className="w-more">
-
-                                                    <a href="https://admin-table-ui.netlify.app/" target="blank"> <span className="w-ctegory">Demo</span></a> / <span className="w-date">React</span>
+                        {
+                            data.map((item, index) => {
+                                return (
+                                    <div className="col-md-4" key={index} >
+                                        <div className="work-box">
+                                            <a href={item?.imageUrl} data-lightbox="gallery-mf">
+                                                <div className="work-img">
+                                                    <Image src={item?.image} alt="" className="img-fluid" width={440} height={365} />
                                                 </div>
-                                            </div>
-                                            <div className="col-sm-4">
-                                                <div className="w-like">
-                                                    <span className="ion-ios-plus-outline"></span>
+                                                <div className="work-content">
+                                                    <div className="row">
+                                                        <div className="col-sm-8">
+                                                            <br />
+                                                            <h2 className="w-title">{item?.title}</h2>
+                                                            <div className="w-more">
+                                                                <a href={item?.demoUrl} target="blank"> <span className="w-ctegory">Demo</span></a> / <span className="w-date">{item?.tech}</span>
+                                                            </div>
+                                                        </div>
+                                                        <div className="col-sm-4">
+                                                            <div className="w-like">
+                                                                <span className="ion-ios-plus-outline"></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </div>
+                                            </a>
                                         </div>
                                     </div>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div className="col-md-4">
-                            <div className="work-box">
-                                <a href="img/portfolio/isee.png" data-lightbox="gallery-mf">
-                                    <div className="work-img">
-                                        <Image src="/img/portfolio/isee.png" alt="" className="img-fluid" width={440} height={365} />
-                                    </div>
-                                    <div className="work-content">
-                                        <div className="row">
-                                            <div className="col-sm-8">
-                                                <h2 className="w-title">ISEE Analytics</h2>
-                                                <div className="w-more">
-
-                                                    <a href="https://i2l.solutions/" target="blank"> <span className="w-ctegory">Demo</span></a> / <span className="w-date">Angular Nodejs</span>
-                                                </div>
-                                            </div>
-                                            <div className="col-sm-4">
-                                                <div className="w-like">
-                                                    <span className="ion-ios-plus-outline"></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div className="col-md-4">
-                            <div className="work-box">
-                                <a href="img/portfolio/isee.png" data-lightbox="gallery-mf">
-                                    <div className="work-img">
-                                        <Image src="/img/portfolio/login-demo.png"  alt="" className="img-fluid" width={440} height={365} />
-                                    </div>
-                                    <div className="work-content">
-                                        <div className="row">
-                                            <div className="col-sm-8">
-                                                <h2 className="w-title">Authentication</h2>
-                                                <div className="w-more">
-                                                <a href="http://mukulsharma.in/login-demo/" target="blank"> <span className="w-ctegory">Demo</span></a> / <span className="w-date">PHP Authentication</span>
-                                                </div>
-                                            </div>
-                                            <div className="col-sm-4">
-                                                <div className="w-like">
-                                                    <span className="ion-ios-plus-outline"></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div className="col-md-4">
-                            <div className="work-box">
-                                <a href="img/portfolio/isee.png" data-lightbox="gallery-mf">
-                                    <div className="work-img">
-                                        <Image src="/img/portfolio/1.png" alt="" className="img-fluid" width={440} height={365} />
-                                    </div>
-                                    <div className="work-content">
-                                        <div className="row">
-                                            <div className="col-sm-8">
-                                                <h2 className="w-title">DNH News</h2>
-                                                <div className="w-more">
-
-                                                    <a href="" target="blank"> <span className="w-ctegory">Demo</span></a> / <span className="w-date">Angular Nodejs</span>
-                                                </div>
-                                            </div>
-                                            <div className="col-sm-4">
-                                                <div className="w-like">
-                                                    <span className="ion-ios-plus-outline"></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-
+                                )
+                            })
+                        }
                     </div>
                 </div>
             </section>
         </>
-
     )
 }
